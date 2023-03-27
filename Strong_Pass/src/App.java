@@ -15,18 +15,18 @@ public class App {
         
 
         //letters
-        for(int i = 0; i<rand.nextInt(8,10);i++){
+        for(int i = 0; i<rand.nextInt(8,11);i++){
             passwordlist += letters[rand.nextInt(0,letters.length)];
         }
         //symbols
-        for (int i =0; i<rand.nextInt(2,4);i++){
+        for (int i =0; i<rand.nextInt(2,5);i++){
             passwordlist += numbers[rand.nextInt(0,numbers.length)];
         }
         for (int i =0; i<rand.nextInt(2,4);i++){
             passwordlist += symbols[rand.nextInt(0,symbols.length)];
         }
 
-        System.out.println("GQWrYNJH123*#\n"+passwordlist);
+        System.out.println("Your Strong Pass is: "+passwordlist);
 
 
         
