@@ -4,7 +4,7 @@ public class App {
         //initializing stuff
         Random rand = new Random();
         //password
-        String passwordlist ="";
+        String strongPass ="";
         //password generator
         //use letters
         char [] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}; 
@@ -15,18 +15,18 @@ public class App {
         
 
         //letters
-        for(int i = 0; i<rand.nextInt(8,10);i++){
-            passwordlist += letters[rand.nextInt(0,letters.length)];
+        for(int i = 0; i<rand.nextInt(8,11);i++){
+            strongPass += letters[rand.nextInt(0,letters.length)];
         }
         //symbols
-        for (int i =0; i<rand.nextInt(2,4);i++){
-            passwordlist += numbers[rand.nextInt(0,numbers.length)];
+        for (int i =0; i<rand.nextInt(2,5);i++){
+            strongPass += numbers[rand.nextInt(0,numbers.length)];
         }
         for (int i =0; i<rand.nextInt(2,4);i++){
-            passwordlist += symbols[rand.nextInt(0,symbols.length)];
+            strongPass += symbols[rand.nextInt(0,symbols.length)];
         }
 
-        System.out.println("GQWrYNJH123*#\n"+passwordlist);
+        System.out.println("Your Strong Pass is: "+strongPass);
 
 
         
