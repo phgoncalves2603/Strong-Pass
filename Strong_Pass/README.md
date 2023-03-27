@@ -1,1 +1,1 @@
-a password manager buuilt in java
+a password manager built in java
