@@ -3,7 +3,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
-import java.util.Scanner;
+
+
+
 public class Password {
     //initializing Random
     Random rand = new Random();
@@ -27,8 +29,9 @@ public class Password {
     Password(String name){
         this.name = name;
         createPassword();
+       
         try{
-        File myfile = new File("src/password.txt");
+        File myfile = new File("src/password.json");
         FileOutputStream fos = new FileOutputStream(myfile,true);
         PrintWriter pw = new PrintWriter(fos);
        
@@ -50,6 +53,7 @@ public class Password {
     }
     //creating the password
     private void createPassword(){
+
         for(int i = 0; i<rand.nextInt(8,11);i++){
             passwordlist += letters[rand.nextInt(0,letters.length)];
             }
@@ -60,6 +64,19 @@ public class Password {
             for (int i =0; i<rand.nextInt(2,5);i++){
                 passwordlist += symbols[rand.nextInt(0,symbols.length)];
             }
+            char [] passwordChar = passwordlist.toCharArray();
+            for(int i = 0; i<passwordlist.length();i++){
+                int randomIndex = rand.nextInt(0,passwordlist.length());
+                char temp = passwordChar[randomIndex];
+                passwordChar[randomIndex] = passwordChar[i];
+                passwordChar[i]= temp; 
+
+            }
+            passwordlist ="";
+            for(int i = 0; i<passwordChar.length;i++){
+                passwordlist+=passwordChar[i];
+            }
+            
         
     }
     

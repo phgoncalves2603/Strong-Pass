@@ -1,9 +1,13 @@
-
+import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
-        Password myPass = new Password("Amazon +"); 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = sc.nextLine();        
+
+        Password myPass = new Password(name); 
        
-        System.out.println("Your Strong Pass is: ");
+        System.out.println("Your Strong Pass is: "+myPass.getPassword());
 
 
         
